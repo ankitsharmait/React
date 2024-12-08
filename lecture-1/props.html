@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <!-- React Algorithm -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React Dom Algorithm -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- this is babel - Transpiler - Translator -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <h1>Props Example</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root');
+        // function that return html
+        function Heading(props)//props as a object
+        {
+            const name = props.name;//here we are receiving values
+            const age = props.age;
+         return <h1> Hii i am {name} {age} year old </h1>
+        }
+        ReactDOM.render(<Heading name={"Ankit"} age={18}></Heading>,rootElement); //here we are passing value 
+    </script>
+</body>
+</html>
