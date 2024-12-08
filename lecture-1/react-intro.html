@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Cdn Link Of React -->
+    <!-- React Algorithm -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React Dom Algorithm -->
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <h1>React Manipulation Example</h1>
+    <div id="root"></div>
+    <script>
+        const rootElement = document.getElementById('root');
+        // creating element through react
+        // React.createElement(tagname,styling,content)
+        // But this syntax is not used for create element... we will use jsx
+        const headingElement = React.createElement('h1',{style:{color :"red"}},"hello from react");
+        //  Now appending the headingelement using reactDOM
+        ReactDOM.render(headingElement,rootElement);
+
+    </script>
+</body>
+</html>
