@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <!-- React Algorithm -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- React Dom Algorithm -->
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- this is babel - Transpiler - Translator -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <h1>Lists Example</h1>
+    <div id="root"></div>
+    <script type="text/babel">
+        const rootElement = document.getElementById('root');
+
+        // function inner(ele)
+        // {
+        //     return <li>{ele}</li>;
+        // }
+        // function that return html
+        function ShopingCart() {
+            const cart = ["apple", "banana", "mango", "grapes", "cherry"];
+            //  return <ul>{cart.map(inner)}</ul>;
+            //map function also give bydefault key value for each list item to identify uniquely
+            return <ul> {cart.map((ele, index) => {
+                return <li key={index}><div>{ele}</div>
+                    <button>click</button></li>
+
+            })} </ul>
+        }
+        ReactDOM.render(<ShopingCart></ShopingCart>, rootElement);
+    </script>
+</body>
+
+</html>
