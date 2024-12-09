@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /***********************************************************************************************/
+        // custum map function
+        /*function map(arr, cb) {
+            let temp = [];
+            for (let i = 0; i < arr.length; i++) {
+                const val = cb(arr[i]);
+                temp.push(val);
+            }
+            return temp;
+        }
+        let arr = [10, 20, 30, 40, 50]
+
+        function squarer(ele) {
+            return ele * ele
+        }
+        const squarr = map(arr, squarer);
+        console.log("squArr", squarr);
+
+        function cuber(ele) {
+            return ele * ele * ele;
+        }
+        const cubarr = map(arr, cuber);
+        console.log("cubarr", cubarr);
+*/
+        /****************************************************************************************************/
+
+        /*inbuilt map function in javascript*/
+        //   The Array.map() method creates a new array from the results of calling a function for every element.
+        let arr = [10, 20, 30, 40, 50];
+        function sqarr(ele) {
+            return ele * ele;
+        }
+
+        const squArr = arr.map(sqarr); // This will return array with square of each element of array
+        console.log("Square Array", squArr);
+
+        function cubarr(ele)
+        {
+            return ele*ele*ele;
+        }
+
+        const cubArr = arr.map(cubarr);// This will Return array with cube of each element 
+        console.log("cube Array",cubArr);
+
+
+
+    </script>
+</body>
+
+</html>
